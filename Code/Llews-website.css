@@ -147,6 +147,6 @@ input:checked + .slider:before{
     margin: 0 auto;
 }
 
-path.leaflet-interactive {
+path.leaflet-interactive:focus {
     outline: none;
 }
