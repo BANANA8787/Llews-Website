@@ -147,10 +147,6 @@ input:checked + .slider:before{
     margin: 0 auto;
 }
 
-path.leaflet-interactive:focus {
-    outline: none;
-}
-
 .leaflet-tile {
     border: none !important;
     outline: none !important;
@@ -158,4 +154,8 @@ path.leaflet-interactive:focus {
 
 .leaflet-marker-shadow {
     display: none !important;
+}
+
+.leaflet-marker-icon {
+    border: none !important;
 }
