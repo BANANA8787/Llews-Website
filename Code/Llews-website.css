@@ -155,3 +155,7 @@ path.leaflet-interactive:focus {
     border: none !important;
     outline: none !important;
 }
+
+.leaflet-marker-shadow {
+    display: none !important;
+}
