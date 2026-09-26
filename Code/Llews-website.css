@@ -140,3 +140,6 @@ input:checked + .slider:before{
     --bg-color: rgb(0, 0, 0);
 }
 
+#map {
+    height: 180px;
+}
