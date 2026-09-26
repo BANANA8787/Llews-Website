@@ -146,3 +146,7 @@ input:checked + .slider:before{
     position: relative;
     margin: 0 auto;
 }
+
+path.leaflet-interactive {
+    outline: none;
+}
