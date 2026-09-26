@@ -141,5 +141,5 @@ input:checked + .slider:before{
 }
 
 #map {
-    height: 180px;
+    height: 500px;
 }
