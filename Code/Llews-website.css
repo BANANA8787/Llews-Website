@@ -1,0 +1,142 @@
+
+/* TEXT STYLES */
+
+body {
+    background-color: var(--bg-color);
+}
+
+h1 {
+    color: var(--primary-color);
+    font-family: "Comic Sans MS", sans-serif;
+    font-size: 30px;
+    text-align: center;
+}
+
+h2, h3 {
+    color: var(--secondary-color);
+    font-family: "Comic Sans MS", sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+
+p, ul, li {
+    font-size: 13px;
+    color: var(--font-color);
+    font-family: "Comic Sans MS", sans-serif;
+    text-align: center;
+    list-style-position: inside;
+    font-weight: bold;
+}
+
+/* IMAGE STYLE */
+
+img {
+    border: 5px solid var(--secondary-color);
+    border-radius: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+}
+
+/* BOX STYLES */
+
+.box-container {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+.text-box {
+    flex: 1;
+    padding: 20px;
+    border: 5px solid var(--secondary-color);
+    border-radius: 10px;
+}
+
+/* BANNER STYLE */
+
+.banner {
+    width: 100%;
+    height: 100px;
+    background-color: var(--banner-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* SWITCH STYLE */
+
+.switch-container {
+    display: flex;
+    align-items: center;
+}
+
+.switch {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input{
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color:var(--secondary-color);
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: rgb(105, 209, 0);
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px rgb(105, 209, 0);
+}
+
+input:checked + .slider:before{
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* LIGHT/DARK MODE VARIABLES */
+
+:root {
+    --primary-color: rgb(25, 49, 0);
+    --secondary-color: rgb(29, 104, 0);
+    --font-color: rgb(0, 0, 0);
+    --banner-color: rgb(110, 212, 0);
+    --bg-color: rgb(255, 255, 255);
+}
+
+
+[data-theme="dark"] {
+    --primary-color: rgb(76, 190, 0);
+    --secondary-color: rgb(99, 199, 0);
+    --font-color: rgb(151, 216, 125);
+    --banner-color: rgb(43, 82, 2);
+    --bg-color: rgb(0, 0, 0);
+}
+
