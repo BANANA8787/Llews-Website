@@ -26,3 +26,11 @@ var heaphy = L.marker([-40.88619, 172.30254]).addTo(map);
 var oldghostroad = L.marker([-41.79023, 172.04795]).addTo(map);
 var humpridge = L.marker([-46.13014, 167.69045]).addTo(map);
 var routeburn = L.marker([-44.76340, 168.17650]).addTo(map);
+
+milford.bindPopup("<b>Milford Track</b><br>");
+kepler.bindPopup("<b>Kepler Track</b><br>");
+paparoa.bindPopup("<b>Paparoa Track</b><br>");
+heaphy.bindPopup("<b>Heaphy Track</b><br>");
+oldghostroad.bindPopup("<b>Old Ghost Road</b><br>");
+humpridge.bindPopup("<b>Hump Ridge Track</b><br>");
+routeburn.bindPopup("<b>Routeburn Track</b><br>");
