@@ -27,10 +27,10 @@ var oldghostroad = L.marker([-41.79023, 172.04795]).addTo(map);
 var humpridge = L.marker([-46.13014, 167.69045]).addTo(map);
 var routeburn = L.marker([-44.76340, 168.17650]).addTo(map);
 
-milford.bindPopup("<b>Milford Track</b><img src='../Images/milford.jpg' width='50px'>");
-kepler.bindPopup("<b>Kepler Track</b><img src='../Images/kepler.jpg' width='50px'>");
-paparoa.bindPopup("<b>Paparoa Track</b><img src='../Images/paparoa.jpg' width='50px'>");
-heaphy.bindPopup("<b>Heaphy Track</b><img src='../Images/heaphy.jpg' width='50px'>");
-oldghostroad.bindPopup("<b>Old Ghost Road</b><img src='../Images/oldghostroad.jpg' width='50px'>");
-humpridge.bindPopup("<b>Hump Ridge Track</b><img src='../Images/humpridge.jpg' width='50px'>");
-routeburn.bindPopup("<b>Routeburn Track</b><img src='../Images/routeburn.jpg' width='50px'>");
+milford.bindPopup("<b>Milford Track</b><img src='../Images/milford.jpg' style='width: 50px;'>");
+kepler.bindPopup("<b>Kepler Track</b><img src='../Images/kepler.jpg' style='width: 50px;'>");
+paparoa.bindPopup("<b>Paparoa Track</b><img src='../Images/paparoa.jpg' style='width: 50px;'>");
+heaphy.bindPopup("<b>Heaphy Track</b><img src='../Images/heaphy.jpg' style='width: 50px;'>");
+oldghostroad.bindPopup("<b>Old Ghost Road</b><img src='../Images/oldghostroad.jpg' style='width: 50px;'>");
+humpridge.bindPopup("<b>Hump Ridge Track</b><img src='../Images/humpridge.jpg' style='width: 50px;'>");
+routeburn.bindPopup("<b>Routeburn Track</b><img src='../Images/routeburn.jpg' style='width: 50px;'>");
