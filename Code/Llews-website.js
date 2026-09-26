@@ -18,3 +18,11 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
+
+var milford = L.marker([-44.81372, 167.78604]).addTo(map);
+var kepler = L.marker([-45.45157, 167.57511]).addTo(map);
+var paparoa = L.marker([-42.13057, 171.34831]).addTo(map);
+var heaphy = L.marker([-40.88619, 172.30254]).addTo(map);
+var oldghostroad = L.marker([-41.79023, 172.04795]).addTo(map);
+var humpridge = L.marker([-46.13014, 167.69045]).addTo(map);
+var routeburn = L.marker([-44.76340, 168.17650]).addTo(map);
