@@ -13,3 +13,4 @@ This map has markers for all the great walks I've been on and has pictures on th
 - The website is hosted on GitHub, at https://banana8787.github.io/Llews-Website/Code/
 - You can change between dark mode and light mode by clicking the switch at the top right of the page. 
 - The interactive map is at the bottom, underneath the text boxes.
+- License is the MIT license
