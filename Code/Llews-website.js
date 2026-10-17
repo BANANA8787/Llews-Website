@@ -42,14 +42,15 @@ routeburn.bindPopup("<b>Routeburn Track</b><img src='../Images/routeburn.jpg' st
 
 //canvas vars
 var c = document.getElementById("myCanvas");
-var ctx = c.getContext("2d");
+var ctx = c.getCo
+ntext("2d");
 
 //vars misc
 var i = 10;
 
-window.onload = setInterval(main(), 1000/30);
-
-main(){
+function main() {
     ctx.fillRect(100,i,100,100);
     i++;
 }
+
+window.onload = setInterval(main, 1000/30);
