@@ -38,18 +38,78 @@ humpridge.bindPopup("<b>Hump Ridge Track</b><img src='../Images/humpridge.jpg' s
 routeburn.bindPopup("<b>Routeburn Track</b><img src='../Images/routeburn.jpg' style='width: 200px;'>");var c = document.getElementById("myCanvas");
 
 
-// canvas JS
+/*  CANVAS JS  */
 
 //canvas vars
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 
-//vars misc
-var i = 10;
+//Consts
+const PADDLE_WIDTH = 10;
+const PADDLE_HEIGHT = 100;
+const PADDLE_SPEED = 10;
+const CANVAS_WIDTH = 400;
+const CANVAS_HEIGHT = 400;
 
-function main() {
-    ctx.fillRect(100,i,100,100);
-    i++;
+//vars misc
+var paddleY = CANVAS_HEIGHT/2 - PADDLE_HEIGHT/2;
+var paddleX = 5;
+var keyPressedName = "";
+
+let keyMap = {
+    'w': false,
+    'a': false,
+    's': false,
+    'd': false,
 }
 
+function main() {
+    //clearing screen then drawing the stuff 
+    ctx.clearRect(0,0,CANVAS_WIDTH,CANVAS_HEIGHT);
+    ctx.fillRect(paddleX,paddleY,PADDLE_WIDTH,PADDLE_HEIGHT);
+
+    ctx.setLineDash([5, 3]);
+
+    ctx.beginPath();
+    ctx.moveTo(CANVAS_WIDTH/2, 0);
+    ctx.lineTo(CANVAS_WIDTH/2, CANVAS_HEIGHT);
+    ctx.stroke();
+
+    //listeners for key presses and releases
+    window.addEventListener('keydown', keyPressed);
+    window.addEventListener('keyup', keyReleased);
+
+    
+    //paddle movement up/down
+    switch(true){
+        case (keyMap['w'] == true || keyMap['arrowUp'] == true) && paddleY > 0:
+            paddleY -= PADDLE_SPEED;
+            break;
+        case (keyMap['s'] == true || keyMap['arrowDown'] == true) && paddleY + PADDLE_HEIGHT < CANVAS_HEIGHT:
+            paddleY += PADDLE_SPEED;
+            break;
+    }
+
+    //paddle movement left/right
+    switch(true){
+        case (keyMap['a'] == true || keyMap['arrowLeft'] == true) && paddleX > 0:
+            paddleX -= PADDLE_SPEED;
+            break;
+        case (keyMap['d'] == true || keyMap['arrowRight'] == true) && paddleX + PADDLE_WIDTH < CANVAS_WIDTH /2:
+            paddleX += PADDLE_SPEED;
+            break;
+    }
+}
+
+//listens for keypresses
+function keyPressed(event) {
+    keyMap[event.key] = true;
+}
+
+//listens for key releases
+function keyReleased(event) {
+    keyMap[event.key] = false;
+}
+
+//runs the main function at 30fps
 window.onload = setInterval(main, 1000/30);
