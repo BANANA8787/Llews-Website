@@ -1,3 +1,5 @@
+
+// map JS
 const toggleSwitch = document.querySelector('.switch input[type="checkbox"]');
 
 function switchTheme(e) {
@@ -33,4 +35,21 @@ paparoa.bindPopup("<b>Paparoa Track</b><img src='../Images/paparoa.jpg' style='w
 heaphy.bindPopup("<b>Heaphy Track</b><img src='../Images/heaphy.jpg' style='width: 200px;'>");
 oldghostroad.bindPopup("<b>Old Ghost Road</b><img src='../Images/oldghostroad.jpg' style='width: 200px;'>");
 humpridge.bindPopup("<b>Hump Ridge Track</b><img src='../Images/humpridge.jpg' style='width: 200px;'>");
-routeburn.bindPopup("<b>Routeburn Track</b><img src='../Images/routeburn.jpg' style='width: 200px;'>");
+routeburn.bindPopup("<b>Routeburn Track</b><img src='../Images/routeburn.jpg' style='width: 200px;'>");var c = document.getElementById("myCanvas");
+
+
+// canvas JS
+
+//canvas vars
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+
+//vars misc
+var i = 10;
+
+window.onload = setInterval(main(), 1000/30);
+
+main(){
+    ctx.fillRect(100,i,100,100);
+    i++;
+}
